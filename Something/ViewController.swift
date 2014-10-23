@@ -31,12 +31,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let messageID = snapshot.name
             let message = snapshot.value as [ String:String ]
             
-//            self.messages.insert([
-//                "content" : message["content"],
-//                "name" : message["name"]!
-//                ], atIndex: 0)
+            self.messages.insert([
+                "content" : message["content"],
+                "name" : message["name"]!
+                ], atIndex: 0)
             
-//            self.tableView.reloadData()
+            self.tableView.reloadData()
             
             self.tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Right)
             
